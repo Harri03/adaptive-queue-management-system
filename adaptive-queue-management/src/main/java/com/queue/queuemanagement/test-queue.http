@@ -1,0 +1,19 @@
+
+### Test 1: Valid customer name
+POST http://localhost:8080/api/queue/join?customerName=Hariram
+
+### Test 2: Empty customer name
+POST http://localhost:8080/api/queue/join?customerName=
+
+### Test 3: Missing customer name
+POST http://localhost:8080/api/queue/join
+
+
+### Start Karthik's service
+PUT http://localhost:8080/api/queue/3/start
+
+### Complete Karthik's service
+PUT http://localhost:8080/api/queue/3/complete
+
+### Check current average service time
+GET http://localhost:8080/api/queue/average-service-time

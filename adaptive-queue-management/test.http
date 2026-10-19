@@ -1,0 +1,55 @@
+### 1. Join Queue - Arun
+POST http://localhost:8080/api/queue/join?customerName=Arun
+
+### 2. Join Queue - Priya
+POST http://localhost:8080/api/queue/join?customerName=Priya
+
+### 3. Join Queue - Karthik
+POST http://localhost:8080/api/queue/join?customerName=Karthik
+
+
+### 4. Check Queue - WAITING
+GET http://localhost:8080/api/queue
+
+
+### 5. Call Arun - CALLED
+PUT http://localhost:8080/api/queue/1/call
+
+
+### 6. Mark Arun as Late - LATE
+PUT http://localhost:8080/api/queue/1/late
+
+
+### 7. Start Service - Priya - SERVING
+PUT http://localhost:8080/api/queue/2/start
+
+
+### 8. Arun Arrives Late
+PUT http://localhost:8080/api/queue/1/arrive
+
+
+### 9. Check Queue After Arun Arrives
+GET http://localhost:8080/api/queue
+
+
+### 10. Complete Priya - COMPLETED
+PUT http://localhost:8080/api/queue/2/complete
+
+
+### 11. Check Queue After Priya Completes
+GET http://localhost:8080/api/queue
+
+
+### Get all queue customers
+GET http://localhost:8080/api/queue
+
+
+### Complete customer service
+PUT http://localhost:8080/api/queue/9/complete
+
+
+### Complete Arun's service
+PUT http://localhost:8080/api/queue/1/complete
+
+### Check average service time
+GET http://localhost:8080/api/queue/average-service-time
